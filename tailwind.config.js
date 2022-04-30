@@ -1,7 +1,9 @@
 const colors = require("tailwindcss/colors");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
 	content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
+	darkMode: "class",
 	theme: {
 		fontFamily: {
 			body: "Poppins, sans-serif",
@@ -60,5 +62,20 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ addBase, addComponents, theme }) {
+			addBase({
+				h1: {
+					fontSize: theme("fontSize.4xl"),
+				},
+			}),
+				addComponents({
+					".plugin-test": {
+						padding: theme("spacing.10"),
+						backgroundColor: theme("colors.gray.900"),
+						color: theme("colors.white"),
+					},
+				});
+		}),
+	],
 };

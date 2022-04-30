@@ -16,7 +16,7 @@
 	}
 
 	.card-title {
-		@apply mb-4 text-lg font-bold;
+		@apply mb-4 text-lg font-bold text-black;
 	}
 
 	.card-body {

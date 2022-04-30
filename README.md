@@ -52,3 +52,8 @@ npm run build
 ```
 
 This will compile everything and create a `dist` folder. This folder will contain the code you need to deploy to the production server.
+
+## Website
+
+This site is running on a platfrom called [Vercel](https://vercel.com)
+The URL is: `https://tailwind-crash-course.vercel.app/`
